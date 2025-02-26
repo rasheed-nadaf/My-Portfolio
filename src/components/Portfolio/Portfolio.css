@@ -1,0 +1,141 @@
+.portfolio__container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2.5rem;
+}
+
+.portfolio__item{
+    background: var(--color-bg-variant);
+    padding: 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 100%; 
+}
+
+.portfolio__item:hover{
+    border-color: var(--color-primary-variant);
+    background: transparent;
+}
+
+.portfolio__item-image{
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.portfolio__item h3{
+    margin: 1.2rem 0 1.2rem;
+    flex-grow: 1;
+}
+
+.portfolio__item-cta{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: auto; 
+}
+
+/* ====== Media Queries(MEDIUM DEVICES) =========*/
+@media screen and (max-width:1024px){
+   .portfolio__container{
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+   }
+}
+
+/* ====== Media Queries(SMALL DEVICES) =========*/
+
+@media screen and (max-width:600px){
+    .portfolio__container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+
+/* === Modal Background (Blur Effect) === */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    overflow: hidden; 
+}
+
+.modal-content {
+    background: var(--color-bg-variant);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+    pointer-events: auto;
+}
+
+.modal-content h2{
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.modal-content h2,strong{
+    font-weight: 700;
+}
+
+.modal-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.modal-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.service__list-icon {
+    flex-shrink: 0; /* Prevent icon from resizing */
+    margin-top: 3px; /* Slight adjustment to align with the first line */
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.tech-item {
+    background: var(--color-primary-variant);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: var(--color-white);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.modal-buttons {
+    margin-top: 1rem;
+}
+
+body.modal-open {
+    overflow: hidden; /* Prevent scrolling when modal is open */
+}
+
+
