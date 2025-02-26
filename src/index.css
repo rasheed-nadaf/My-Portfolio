@@ -38,7 +38,7 @@ body{
     background: var(--color-bg);
     color: var(--color-white);
     line-height: 1.7;
-    background-image: url(../src/assets/bg.avif);
+    background-image: url('/public/assets/bg.avif');
     background-size: cover; /* Ensures the image covers the entire screen */
     background-repeat: no-repeat; /* Prevents image repetition */
     background-position: center; /* Centers the image */
